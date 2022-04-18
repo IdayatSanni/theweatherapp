@@ -1,5 +1,5 @@
 .container {
-  margin-top: 50px;
+  max-width: 50px;
   padding: 4px;
   background-image: url("../media/sky2.jpg");
   background-size: cover;
