@@ -1,11 +1,14 @@
 .container {
-  max-width: 50px;
+  max-width: 50%;
+  margin: 50px 50px;
   padding: 4px;
   background-image: url("../media/sky2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
-
+.weather-info {
+  margin: 40px 40px;
+}
 .days-dec {
   margin-top: 50px;
 }
@@ -18,7 +21,7 @@
   );
 }
 .search-box {
-  margin-left: 20px;
+  margin: 20px 60px;
 }
 .wed,
 .tue,
@@ -37,9 +40,11 @@
 .fri:hover,
 .sat:hover {
   background-color: rgba(255, 255, 255, 0.548);
+  padding: 10px;
 }
 
 h2 {
+  padding: 10px;
   text-align: center;
   line-height: 1.8;
   color: black;

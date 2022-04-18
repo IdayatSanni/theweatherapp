@@ -23,15 +23,15 @@
       <div class="weather-colu">
         <h2>Weather Forecast</h2>
         <form class="search-box" id="search-form">
-         <div class="row">
-            <div class="col-6">
+         <div class="row g-3">
+            <div class="col-sm-7">
               <input type="text" placeholder="search" class="form-control" id="city-name" />
             </div>
-            <div class="col-3">
+            <div class="col-sm">
               <input type="submit" value="Search" class="btn btn-dark" />
-            </div>
-            <div class="col-3">
-              <input type="submit" value="Current" class="btn btn-dark" id="current-location"/>
+              <span class="col-sm">
+                <input type="submit" value="Current" class="btn btn-dark" id="current-location"/>
+              </span>
             </div>
          </div>
         </form>
@@ -45,7 +45,7 @@
               <i class="fa-solid fa-cloud-meatball thun"></i>
             </span>
           </div>
-        <div class="row days-dec">
+        <div class="row g-0 days-dec">
           <div class="col pt-2 pb-2 mon">
             Tuesday
             <div><i class="fa-solid fa-sun"></i></div>
