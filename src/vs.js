@@ -43,23 +43,7 @@ function search(city) {
   axios.get(apiUrl).then(displayWeather);
 }
 
-function searchLocation(position) {
-  let longitude = position.coords.longitude;
-  let latitude = position.coords.latitude;
-  let apiKey = `bf14d6c56856845e46caa5161a336f68`;
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(displayWeather);
-}
-
-function currentWeatherLocation(event) {
-  event.preventDefault();
-  navigator.geolocation.getCurrentPosition(searchLocation);
-}
-
 let tempeCity = document.querySelector("#search-form");
 tempeCity.addEventListener("submit", displayWeather);
 
 search("Nigeria");
-
-let currentTempLocation = document.querySelector("#current-location");
-currentTempLocation.addEventListener("click", currentWeatherLocation);
