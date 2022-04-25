@@ -1,26 +1,3 @@
-let weather = {
-  paris: {
-    temp: 19.7,
-    humidity: 80,
-  },
-  tokyo: {
-    temp: 17.3,
-    humidity: 50,
-  },
-  lisbon: {
-    temp: 30.2,
-    humidity: 20,
-  },
-  "san francisco": {
-    temp: 20.9,
-    humidity: 100,
-  },
-  moscow: {
-    temp: -5,
-    humidity: 20,
-  },
-};
-
 let now = new Date();
 let days = [
   "Sunday",
@@ -61,7 +38,7 @@ function search(city) {
 function displayWeather(response) {
   document.querySelector("#country-name").innerHTML = response.data.name;
   let temperature = Math.round(response.data.main.temp);
-  document.querySelector("#temperature").innerHTML = `${temperature}°C`;
+  document.querySelector("#temperature").innerHTML = `${temperature}`;
 }
 function cityInformation(event) {
   event.preventDefault();

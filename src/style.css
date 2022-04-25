@@ -1,3 +1,17 @@
+h2 {
+  text-align: center;
+  line-height: 1.8;
+  color: black;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  margin-top: 10px;
+  font-weight: 500;
+  line-height: 1.2;
+}
 .container {
   max-width: 600px;
   margin-top: 50px;
@@ -6,7 +20,31 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+#temperature {
+  font-size: 64px;
+  line-height: 1;
+}
 
+.celsius {
+  position: relative;
+  top: -32px;
+}
+
+.image-sizing {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  margin-right: -13px;
+  top: -13px;
+  left: -14px;
+}
+.image-weather {
+  margin-top: -25px;
+}
+.information {
+  margin-top: 50px;
+  color: black;
+}
 .days-dec {
   margin-top: 50px;
 }
@@ -38,20 +76,4 @@
 .fri:hover,
 .sat:hover {
   background-color: rgba(255, 255, 255, 0.548);
-}
-
-h2 {
-  text-align: center;
-  line-height: 1.8;
-  color: black;
-}
-.information {
-  margin-top: 50px;
-  color: black;
-}
-ul {
-  list-style: none;
-  margin-top: 10px;
-  font-weight: 500;
-  line-height: 1.2;
 }
