@@ -37,12 +37,6 @@ function displayWeather(response) {
   );
 }
 
-function cityInformation(event) {
-  event.preventDefault();
-  let cityName = document.querySelector("#city-name").value;
-  search(cityName);
-}
-
 function search(city) {
   let apiKey = `bf14d6c56856845e46caa5161a336f68`;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -63,7 +57,7 @@ function currentWeatherLocation(event) {
 }
 
 let tempeCity = document.querySelector("#search-form");
-tempeCity.addEventListener("submit", cityInformation);
+tempeCity.addEventListener("submit", displayWeather);
 
 search("Nigeria");
 
