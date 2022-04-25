@@ -23,29 +23,53 @@
       <div class="weather-colu">
         <h2>Weather Forecast</h2>
         <form class="search-box" id="search-form">
-         <div class="row g-3">
-            <div class="col-sm-7">
-              <input type="text" placeholder="search" class="form-control" id="city-name" />
+          <div class="row">
+            <div class="col-7">
+              <input
+                type="text"
+                placeholder="search"
+                class="form-control"
+                id="city-name"
+              />
             </div>
-            <div class="col-sm">
+            <div class="col">
               <input type="submit" value="Search" class="btn btn-dark" />
             </div>
-            <div class="col-sm">
-              <input type="submit" value="Current" class="btn btn-dark" id="current-location"/>
+            <div class="col">
+              <input
+                type="submit"
+                value="Current"
+                class="btn btn-dark"
+                id="current-location"
+              />
             </div>
-         </div>
+          </div>
         </form>
         <div class="ps-3 weather-info">
-         <h1 id="country-name"></h1>
-          <span id="date-now"></span>
-          <br>
-           <span id="temperature"></span>
-             </br>
-            <span>
-              <i class="fa-solid fa-cloud-meatball thun"></i>
-            </span>
+          <div class="row information">
+            <div class="col-6">
+              <h1 id="country-name"></h1>
+              <span id="date-now"></span>
+              <br />
+              <div class="clearfix">
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                  alt="clear" class="float-left"
+                />
+                <span class="float-left">
+                  <span id="temperature"></span>
+                  <span>°C | ℉</span>
+                </span>
+              </div>
+           </div>
+          <div class="col-6">
+            <ul>
+              <li>Humidity:<span id="humidity"></span></li>
+              <li>Wind:<span id="wind"></span></li>
+            </ul>
           </div>
-        <div class="row g-0 days-dec">
+        </div>
+        <div class="row days-dec">
           <div class="col pt-2 pb-2 mon">
             Tuesday
             <div><i class="fa-solid fa-sun"></i></div>
