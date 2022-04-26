@@ -26,7 +26,8 @@ function displayWeather(response) {
   let iconElement = document.querySelector("#icons");
 
   cityElement.innerHTML = response.data.name;
-  temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  celsiusTemperature = response.data.main.temp;
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
@@ -37,13 +38,43 @@ function displayWeather(response) {
   );
 }
 
+function cityInformation(event) {
+  event.preventDefault();
+  let cityName = document.querySelector("#city-name").value;
+  search(cityName);
+}
+
 function search(city) {
   let apiKey = `bf14d6c56856845e46caa5161a336f68`;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeather);
 }
+function displayFarenTemp(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  celsiusTemperatureDisplay.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let farenTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(farenTemperature);
+}
+
+function displayCelsiusTemp(event) {
+  event.preventDefault();
+  celsiusTemperatureDisplay.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
 
 let tempeCity = document.querySelector("#search-form");
-tempeCity.addEventListener("submit", displayWeather);
+tempeCity.addEventListener("submit", cityInformation);
 
 search("Nigeria");
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFarenTemp);
+
+let celsiusTemperatureDisplay = document.querySelector("celcius-link");
+celsiusTemperatureDisplay.addEventListener("click", displayCelsiusTemp);
