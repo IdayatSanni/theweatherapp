@@ -41,12 +41,22 @@ ul {
 .image-weather {
   margin-top: -25px;
 }
+
+.weather-forecast-temperature {
+  font-size: 14px;
+  color: black;
+}
 .information {
   margin-top: 50px;
   color: black;
 }
 .days-dec {
   margin-top: 50px;
+  text-align: center;
+  color: black;
+}
+.days-dec:hover {
+  background-color: rgba(255, 255, 255, 0.548);
 }
 .weather-colu {
   margin: 30px 10px;
@@ -58,22 +68,4 @@ ul {
 }
 .search-box {
   margin-left: 20px;
-}
-.wed,
-.tue,
-.mon,
-.thur,
-.fri,
-.sat {
-  text-align: center;
-  color: black;
-}
-
-.tue:hover,
-.wed:hover,
-.mon:hover,
-.thur:hover,
-.fri:hover,
-.sat:hover {
-  background-color: rgba(255, 255, 255, 0.548);
 }
