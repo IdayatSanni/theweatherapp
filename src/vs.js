@@ -94,24 +94,6 @@ function search(city) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeather);
 }
-function displayFarenTemp(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  celsiusTemperatureDisplay.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-  let farenTemperature = (celsiusTemperature * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(farenTemperature);
-}
-
-function displayCelsiusTemp(event) {
-  event.preventDefault();
-  celsiusTemperatureDisplay.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-}
-
-let celsiusTemperature = null;
 
 let tempeCity = document.querySelector("#search-form");
 tempeCity.addEventListener("submit", cityInformation);
