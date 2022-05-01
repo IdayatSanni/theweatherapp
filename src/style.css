@@ -12,6 +12,12 @@ ul {
   font-weight: 500;
   line-height: 1.2;
 }
+.days-dec {
+  margin: 30px 4px;
+  text-align: center;
+  color: black;
+  padding-bottom: 10px;
+}
 .container {
   max-width: 600px;
   margin-top: 50px;
@@ -46,15 +52,14 @@ ul {
   font-size: 14px;
   color: black;
 }
+.weather-forecast-min {
+  opacity: 0.6px;
+}
 .information {
   margin-top: 50px;
   color: black;
 }
-.days-dec {
-  margin-top: 50px;
-  text-align: center;
-  color: black;
-}
+
 .weather-colu {
   margin: 30px 10px;
   background: linear-gradient(
@@ -63,6 +68,7 @@ ul {
     rgba(248, 217, 190, 0.411) 64.6%
   );
 }
+
 .search-box {
   margin-left: 20px;
 }
