@@ -38,6 +38,26 @@ function displayWeather(response) {
   );
 }
 
+function displayWeatherInfo() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Wed", "Thur", "Fri", "Sat", "Sun"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+      <div class="col-2">
+              ${day}
+              <div><img src="https://ssl.gstatic.com/onebox/weather/48/rain_s_cloudy.png" alt="clear" width="20px"></img></div>
+              <div class="weather-forecast-temperature">
+                <span class="weather-forecast-max">37°C </span><span class="weather-forecast-min">37°C</span>
+              </div>`;
+
+    forecastHTML = forecastHTML + `</div>`;
+    forecastElement.innerHTML = forecastHTML;
+  });
+}
+
 function cityInformation(event) {
   event.preventDefault();
   let cityName = document.querySelector("#city-name").value;
@@ -72,9 +92,4 @@ let tempeCity = document.querySelector("#search-form");
 tempeCity.addEventListener("submit", cityInformation);
 
 search("Nigeria");
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", displayFarenTemp);
-
-let celsiusTemperatureDisplay = document.querySelector("celcius-link");
-celsiusTemperatureDisplay.addEventListener("click", displayCelsiusTemp);
+displayWeatherInfo();

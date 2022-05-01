@@ -55,9 +55,6 @@ ul {
   text-align: center;
   color: black;
 }
-.days-dec:hover {
-  background-color: rgba(255, 255, 255, 0.548);
-}
 .weather-colu {
   margin: 30px 10px;
   background: linear-gradient(
