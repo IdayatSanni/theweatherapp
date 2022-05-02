@@ -12,6 +12,11 @@ ul {
   font-weight: 500;
   line-height: 1.2;
 }
+small {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
 .days-dec {
   margin: 30px 4px;
   text-align: center;
